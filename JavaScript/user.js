@@ -1,24 +1,8 @@
-const data = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
-console.log(data);
-
-const ul = document.getElementById('ul');
-
-data.forEach(element => {
-    const name = element.name;
-    const surname = element.surname;
-    const email = element.email;
-    const password = element.password;
-
+const ul = document.getElementById('saqlanganlar');
+let storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+storedUsers.forEach(element => {
     let li = document.createElement('li');
-    let li1 = document.createElement('li');
-    let li2 = document.createElement('li');
-    let li3 = document.createElement('li');
-    li.textContent = name;
-    li1.textContent = surname;
-    li2.textContent = email;
-    li3.textContent = password;
+    li.textContent = element.malumot;
     ul.appendChild(li);
-    ul.appendChild(li1);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
 });
+

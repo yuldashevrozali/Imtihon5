@@ -9,8 +9,7 @@ body{
 }
 
 .all{
-    margin-left: 450px;
-    margin-top: 200px;
+    margin-left: 4px;
 }
 
 li{
@@ -20,8 +19,7 @@ li{
 }
 
 #ul{
-    margin-top: -206px;
-    margin-left: 85px;
+    margin-left: 0px;
 }
 
 p{
