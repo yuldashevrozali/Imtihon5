@@ -143,6 +143,10 @@ h1 {
     overflow-y: hidden;
 }
 
+#more{
+    
+}
+
 .block {
     width: 250px;
     height: 350px;
@@ -161,7 +165,19 @@ h1 {
 
 #body {
     width: 1400px;
-    /* background-image: url(../images/Background.jpeg); */
+}
+
+h6{
+    width: 100px;
+    text-align: center;
+    font-size: 18px;
+    color: #03353E;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 4px;
+    position: absolute;
+    top: 325px;
+    left: 80px;
 }
 
 #main {
