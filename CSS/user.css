@@ -1,0 +1,29 @@
+.lis{
+    display: flex;
+}
+
+body{
+    background-image: url(../images/1.webp);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.all{
+    margin-left: 450px;
+    margin-top: 200px;
+}
+
+li{
+    list-style: none;
+    font-size: 24px;
+    margin-bottom: 23px;
+}
+
+#ul{
+    margin-top: -206px;
+    margin-left: 85px;
+}
+
+p{
+    font-size: 24px;
+}
