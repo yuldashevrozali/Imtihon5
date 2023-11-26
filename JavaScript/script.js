@@ -148,6 +148,14 @@ const all = document.getElementById('all');
 all && all.addEventListener('click', function () {
     let name;
 
+    // const fetchDataAndCreateElements = async () => {
+    //     const dataPage2 = await fetchData("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=2");
+    //     createMovieElements(dataPage2, 'main');
+    
+    //     const dataPage10 = await fetchData("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=10");
+    //     createMovieElements(dataPage10, 'main');
+    // };
+
     const FetchAll = async () => {
         const fetch1 = awaitfetchData("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=10")
         Newfetch()
