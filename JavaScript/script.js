@@ -179,25 +179,31 @@ function Api(kirit) {
                     svg.addEventListener('click', function () {
                         try {
                             let storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-
+                        
                             let malumot = element.title;
                             let elementOverview = element.overview;
                             let lang = element.original_language;
                             let photo = element.poster_path;
-
+                        
                             let userData = {
                                 malumot: elementOverview,
                                 til: lang,
                                 sarlavha: malumot,
                                 yili: element.release_date,
                             };
-
-                            storedUsers.push(userData);
-
+                    
+                            let userMap = new Map();
+                            userMap.set('malumot', userData.malumot);
+                            userMap.set('til', userData.til);
+                            userMap.set('sarlavha', userData.sarlavha);
+                            userMap.set('yili', userData.yili);
+                            storedUsers.push(userMap);
+                        
                             localStorage.setItem('users', JSON.stringify(storedUsers));
                         } catch (error) {
                             console.error(error);
                         }
+                        
                     });
 
 
