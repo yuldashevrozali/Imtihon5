@@ -163,7 +163,10 @@ h1 {
 .lii{
     list-style: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 15px;
     background-color: #03353E;
     width: 300px;
     height: auto;
@@ -195,12 +198,25 @@ h6{
     width: 1200px;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    display: flex;
+}
+
+.main_body{
+    width: 700px;
+    height: 400px;
+    background-color: red;
+    box-shadow: 10px 10px 12px black;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
     display: flex;
 }
 
 #main img{
     width: 400px;
+    height: 400px;
+    margin-left: 460px;
 }
 
 .block {

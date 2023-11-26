@@ -26,10 +26,13 @@ fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_k
                 blocks.forEach(block => {
                     block.style.display = 'none';
                 });
-                const main =  document.getElementById('main');
+                const main =  document.getElementById('main_body');
                 let lii = document.createElement('li');
                 let img = document.createElement('img');
                 img.src = `https://image.tmdb.org/t/p/w500${element.poster_path}`
+                img.style.width = '300px';
+                img.style.marginLeft = '15px';
+                img.style.marginRight = '45px';
                 lii.classList.add('lii');
                 lii.textContent = element.overview;
                 main.appendChild(img);
@@ -148,18 +151,23 @@ const all = document.getElementById('all');
 all && all.addEventListener('click', function () {
     let name;
 
-    // const fetchDataAndCreateElements = async () => {
-    //     const dataPage2 = await fetchData("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=2");
-    //     createMovieElements(dataPage2, 'main');
+    const fetchDataAndCreateElements = async () => {
+        const dataPage2 = await fetchData("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=2");
+        createMovieElements(dataPage2, 'main');
     
-    //     const dataPage10 = await fetchData("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=10");
-    //     createMovieElements(dataPage10, 'main');
-    // };
+        const dataPage10 = await fetchData("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=48");
+        createMovieElements(dataPage10, 'main');
+    };
 
     const FetchAll = async () => {
-        const fetch1 = awaitfetchData("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=10")
-        Newfetch()
+        const fetch1 = await fetchData("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=10")
+        Newfetch(fetch1, 'main');
+
+        const fetch5 = await fetchData("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=5")
+        Newfetch(fetch5, 'main');
     }
+
+    FetchAll();
 
     fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=")
     .then((data) => {
