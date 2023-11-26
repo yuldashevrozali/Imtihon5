@@ -26,6 +26,11 @@ fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_k
                 blocks.forEach(block => {
                     block.style.display = 'none';
                 });
+                const main =  document.getElementById('main');
+                let lii = document.createElement('li');
+                lii.classList.add('lii');
+                lii.textContent = element.overview;
+                main.appendChild(lii);
             })
             
 
@@ -49,7 +54,7 @@ fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_k
                 Div.style.mozFilter = 'none';
             });
 
-            fragment.appendChild(Div); // DocumentFragmentga element qo'shish
+            fragment.appendChild(Div); 
 
             Div && Div.addEventListener('click', function () {
                 console.log("jhhbv");
